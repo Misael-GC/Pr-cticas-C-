@@ -5,10 +5,16 @@ using namespace std;
 
 int main()
 {
-    int Edad =0;
-    cout << "Introduce tu edad:" << endl;
+    int base = 0;
+    int altura = 0;
 
-    cin >> Edad;
+    cout << "Introduce la base de tu rectangulo:" <<endl;
+    cin >> base;
 
-    cout <<"Que joven, apenas tienes " << Edad << endl;
+    cout << "Introduce la altura de tu rectangulo:" <<endl;
+    cin >> altura;
+
+    cout << "El area de tu rectangulo es:" <<base * altura <<endl;
+
+    return 0;
 }
