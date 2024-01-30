@@ -18,4 +18,16 @@ int main(){
     cout << Corbatas[3] << endl;
     cout << Corbatas[4] << endl;
     cout << Corbatas[5] << endl;
+
+    //otra forma de crear string, donde el usuario podra tomar el nombre del indice
+
+    int index = 0;
+    cin >> index;
+        string Name[4] = {"Asterix", "Idiafix", "Obelix", "Panoramix"};
+
+    string CurrentName = Name[index];
+
+    cout << CurrentName << endl;
+    
+    return 0;
 }
