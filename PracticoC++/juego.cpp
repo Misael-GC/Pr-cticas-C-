@@ -53,6 +53,10 @@ int main(){
         }else if (Input == 'p')
         {
             isGameOver = true;
+        }else if(Input == 's'){
+            HeroPosY = HeroPosY + 1;
+        }else if(Input == 'w'){
+            HeroPosY = HeroPosY - 1;
         }
         DrawMap(HeroPosX, HeroPosY, GameMap);
 
