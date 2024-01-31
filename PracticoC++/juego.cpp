@@ -2,42 +2,59 @@
 
 using namespace std;
 
-void DrawMap(int HeroPos, char GameMap[5]){
+void DrawMap(int HeroPosX, int HeroPosY, char GameMap[5][5]){
         for (int i = 0; i < 5; i++)
     {
-        if (i != HeroPos)
+        for (int j = 0; j < 5; j++)
         {
-            cout <<GameMap[i];
-        }else{
-            cout <<'H';
+            if (i != HeroPosY)
+            {
+                cout <<GameMap[j][i];
+            }else
+            {
+                if(j != HeroPosX){
+                    cout <<GameMap[j][i];
+                }else{
+                    cout <<'H';
+                }
+            }
         }
-
+        cout <<endl;
     }
-
+    cout <<endl;
 }
 
+
 int main(){
-    int HeroPos = 1;
+    int HeroPosX = 1;
+    int HeroPosY = 1;
     bool isGameOver = false;
     char Input = ' ';
-    char GameMap[5] = {'1','1','1','1','1'};
 
-     DrawMap(HeroPos, GameMap);
+    char GameMap [5][5] = {
+        {'1','1','1','1','1'},
+        {'1','1','1','1','1'},
+        {'1','1','1','1','1'},
+        {'1','1','1','1','1'},
+        {'1','1','1','1','1'}
+        };
+
+     DrawMap(HeroPosX, HeroPosY, GameMap);
 
     while(isGameOver == false){
         cin >>Input;
 
         if (Input == 'd')
         {
-            HeroPos = HeroPos + 1;
+            HeroPosX = HeroPosX + 1;
         }else if (Input == 'a')
         {
-            HeroPos = HeroPos - 1;
+            HeroPosX = HeroPosX - 1;
         }else if (Input == 'p')
         {
             isGameOver = true;
         }
-        DrawMap(HeroPos, GameMap);
+        DrawMap(HeroPosX, HeroPosY, GameMap);
 
     }
 
