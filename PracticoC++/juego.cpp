@@ -11,13 +11,34 @@ void DrawMap(int HeroPos, char GameMap[5]){
         }else{
             cout <<'H';
         }
-        
+
     }
-    
+
 }
 
 int main(){
     int HeroPos = 1;
+    bool isGameOver = false;
+    char Input = ' ';
     char GameMap[5] = {'1','1','1','1','1'};
+
      DrawMap(HeroPos, GameMap);
+
+    while(isGameOver == false){
+        cin >>Input;
+
+        if (Input == 'd')
+        {
+            HeroPos = HeroPos + 1;
+        }else if (Input == 'a')
+        {
+            HeroPos = HeroPos - 1;
+        }else if (Input == 'p')
+        {
+            isGameOver = true;
+        }
+        DrawMap(HeroPos, GameMap);
+
+    }
+
 }
