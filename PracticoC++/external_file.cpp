@@ -34,7 +34,7 @@ int main()
          }
          Renglon++;
        }
-       
+
     }else{
         cout<<"Error al abrir el archivo, checar el antivirus";
     }
@@ -42,3 +42,8 @@ int main()
     cout << "YOUR HERO IS : "<<NombreDelHeroe<<endl;
     return 0;
 }
+
+/*
+### Reto 
+En el mapa, crear punto de inicio y salida del jugador
+*/
